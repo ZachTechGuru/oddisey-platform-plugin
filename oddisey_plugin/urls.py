@@ -1,10 +1,9 @@
 """
 URLs for oddisey_plugin.
 """
-from django.urls import re_path  # pylint: disable=unused-import
-from django.views.generic import TemplateView  # pylint: disable=unused-import
+from django.urls import path
+from .views import AppInfoView
 
 urlpatterns = [
-    # TODO: Fill in URL patterns and views here.
-    # re_path(r'', TemplateView.as_view(template_name="oddisey_plugin/base.html")),
+    path('info', AppInfoView.as_view(), name='oddisey-info'),
 ]
